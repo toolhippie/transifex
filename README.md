@@ -1,6 +1,6 @@
-# Transifex
+# transifex
 
-[![Build Status](https://github.dronehippie.de/api/badges/toolhippie/transifex/status.svg)](https://github.dronehippie.de/toolhippie/transifex)
+[![Build Status](https://cloud.drone.io/api/badges/toolhippie/transifex/status.svg)](https://cloud.drone.io/toolhippie/transifex)
 [![](https://images.microbadger.com/badges/image/toolhippie/transifex:latest.svg)](https://microbadger.com/images/toolhippie/transifex:latest "Get your own image badge on microbadger.com")
 
 TBD
