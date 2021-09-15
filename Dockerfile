@@ -1,4 +1,4 @@
-FROM webhippie/python:3.9
+FROM webhippie/alpine:latest
 ENTRYPOINT [""]
 ENV PY_COLORS=1
 
@@ -7,5 +7,6 @@ ENV TRANSIFEX_VERSION=0.14.3
 
 RUN apk update && \
   apk upgrade && \
+  apk add git python3 python3-dev py3-pip && \
   pip3 install -U transifex-client==${TRANSIFEX_VERSION} && \
   rm -rf /var/cache/apk/* /root/.cache
