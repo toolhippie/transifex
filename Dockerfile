@@ -3,7 +3,7 @@ ENTRYPOINT [""]
 ENV PY_COLORS=1
 
 # renovate: datasource=pypi depName=transifex-client
-ENV TRANSIFEX_VERSION=0.14.3
+ENV TRANSIFEX_VERSION=0.14.4
 
 RUN apk update && \
   apk upgrade && \
