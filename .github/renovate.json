@@ -3,10 +3,12 @@
     "extends": [
         "github>webhippie/renovate:docker"
     ],
-    "packageRules": [{
-        "groupName": "transifex packages",
-        "matchDatasources": [
-            "pypi"
-        ]
-    }]
+    "packageRules": [
+        {
+            "groupName": "transifex packages",
+            "matchDatasources": [
+                "pypi"
+            ]
+        }
+    ]
 }
