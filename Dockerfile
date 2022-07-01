@@ -1,12 +1,19 @@
+FROM webhippie/golang:1.18 AS build
+
+# renovate: datasource=github-tags depName=transifex/cli
+ENV TRANSIFEX_VERSION=v1.2.0
+
+RUN git clone -b ${TRANSIFEX_VERSION} https://github.com/transifex/cli.git /srv/app/src && \
+  cd /srv/app/src && \
+  GO111MODULE=on go install .
+
+RUN ls -r /srv/app/*
+
 FROM webhippie/alpine:3.15
 ENTRYPOINT [""]
-ENV PY_COLORS=1
-
-# renovate: datasource=pypi depName=transifex-client
-ENV TRANSIFEX_VERSION=0.14.4
 
 RUN apk update && \
   apk upgrade && \
-  apk add git python3 python3-dev py3-pip && \
-  pip3 install -U transifex-client==${TRANSIFEX_VERSION} && \
-  rm -rf /var/cache/apk/* /root/.cache
+  rm -rf /var/cache/apk/*
+
+COPY --from=build /srv/app/bin/cli /usr/bin/tx
