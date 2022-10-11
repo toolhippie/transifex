@@ -1,7 +1,7 @@
 FROM webhippie/golang:1.18 AS build
 
 # renovate: datasource=github-tags depName=transifex/cli
-ENV TRANSIFEX_VERSION=v1.3.1
+ENV TRANSIFEX_VERSION=v1.4.0
 
 RUN git clone -b ${TRANSIFEX_VERSION} https://github.com/transifex/cli.git /srv/app/src && \
   cd /srv/app/src && \
