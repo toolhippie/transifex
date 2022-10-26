@@ -1,4 +1,4 @@
-FROM webhippie/golang:1.18 AS build
+FROM webhippie/golang:1.19 AS build
 
 # renovate: datasource=github-tags depName=transifex/cli
 ENV TRANSIFEX_VERSION=v1.4.1
