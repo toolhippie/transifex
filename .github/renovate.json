@@ -7,7 +7,7 @@
         {
             "groupName": "transifex packages",
             "matchDatasources": [
-                "github-tags"
+                "github-releases"
             ]
         }
     ]

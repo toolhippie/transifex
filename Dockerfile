@@ -1,9 +1,9 @@
 FROM webhippie/golang:1.19 AS build
 
-# renovate: datasource=github-tags depName=transifex/cli
-ENV TRANSIFEX_VERSION=v1.4.1
+# renovate: datasource=github-releases depName=transifex/cli
+ENV TRANSIFEX_VERSION=1.4.1
 
-RUN git clone -b ${TRANSIFEX_VERSION} https://github.com/transifex/cli.git /srv/app/src && \
+RUN git clone -b v${TRANSIFEX_VERSION} https://github.com/transifex/cli.git /srv/app/src && \
   cd /srv/app/src && \
   GO111MODULE=on go install .
 
