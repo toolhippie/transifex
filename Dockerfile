@@ -9,7 +9,7 @@ RUN git clone -b v${TRANSIFEX_VERSION} https://github.com/transifex/cli.git /srv
 
 RUN ls -r /srv/app/*
 
-FROM webhippie/alpine:3.16
+FROM webhippie/alpine:3.17
 ENTRYPOINT [""]
 
 RUN apk update && \
