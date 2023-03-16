@@ -1,4 +1,4 @@
-FROM ghcr.io/webhippie/golang:1.20 AS build
+FROM ghcr.io/dockhippie/golang:1.20 AS build
 
 # renovate: datasource=github-releases depName=transifex/cli
 ENV TRANSIFEX_VERSION=1.6.5
@@ -9,7 +9,7 @@ RUN git clone -b v${TRANSIFEX_VERSION} https://github.com/transifex/cli.git /srv
 
 RUN ls -r /srv/app/*
 
-FROM ghcr.io/webhippie/alpine:3.17
+FROM ghcr.io/dockhippie/alpine:3.17
 ENTRYPOINT [""]
 
 RUN apk update && \
