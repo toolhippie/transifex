@@ -1,7 +1,7 @@
 FROM ghcr.io/dockhippie/golang:1.20 AS build
 
 # renovate: datasource=github-releases depName=transifex/cli
-ENV TRANSIFEX_VERSION=1.6.8
+ENV TRANSIFEX_VERSION=1.6.9
 
 RUN git clone -b v${TRANSIFEX_VERSION} https://github.com/transifex/cli.git /srv/app/src && \
   cd /srv/app/src && \
