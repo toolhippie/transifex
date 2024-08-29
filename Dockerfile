@@ -1,4 +1,4 @@
-FROM ghcr.io/dockhippie/golang:1.21 AS build
+FROM ghcr.io/dockhippie/golang:1.23 AS build
 
 # renovate: datasource=github-releases depName=transifex/cli
 ENV TRANSIFEX_VERSION=1.6.16
